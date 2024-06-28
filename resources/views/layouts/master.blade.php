@@ -1,5 +1,7 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-layout="vertical" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-layout="vertical" data-topbar="light" data-sidebar="dark"
+    data-sidebar-size="lg">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,10 +9,11 @@
     <title>@yield('title') | {{ setting('site_name') }}</title>
     <meta name="description" content="{{ setting('site_description') }}">
     <meta name="keywords" content="{{ setting('site_keywords') }}">
-    <meta name="author" content="{{ setting('site_author', 'Ngô Quốc Đạt') }}">
+    <meta name="author" content="{{ setting('site_author', 'Ngoccoder') }}">
     <link rel="shortcut icon" href="{{ asset('storage/images/' . setting('site_favicon')) }}" type="image/x-icon">
     @include('layouts.css')
 </head>
+
 <body>
     <div id="layout-wrapper">
         @include('partials.topbar')
@@ -31,4 +34,5 @@
     @include('partials.toastr')
     @include('layouts.scripts')
 </body>
+
 </html>

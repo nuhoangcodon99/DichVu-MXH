@@ -7,7 +7,7 @@
 
 Đây là cách để ủng hộ nhà phát triển, thông tin chuyển khoản:
 
-- Vietcombank **1046738751 ** (Trinh Tan Loc)
+- Vietcombank **1046738751** (Trinh Tan Loc)
 - Momo **0858623705** (Trinh Tan Loc)
 
 ### Đóng góp

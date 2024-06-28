@@ -12,26 +12,33 @@
                 <div class="card-body">
                     <form action="{{ route('admin.settings.store') }}" method="post">
                         @csrf
-                        <p class="fw-bold fs-15">Xem hướng dẫn cấu hình <a href="https://github.com/datlechin/DichVu-MXH/wiki/Cấu-hình-nạp-tự-động-qua-thesieure.com" target="_blank">tại đây</a></p>
+                        <p class="fw-bold fs-15">Xem hướng dẫn cấu hình <a
+                                href="https://github.com/nuhoangcodon99/DichVu-MXH/wiki/Cấu-hình-nạp-tự-động-qua-thesieure.com"
+                                target="_blank">tại đây</a></p>
                         <div class="mb-3">
                             <label for="tsr_cookie" class="form-label">Cookie</label>
-                            <input type="text" id="tsr_cookie" name="tsr_cookie" class="form-control" value="{{ setting('tsr_cookie') }}">
+                            <input type="text" id="tsr_cookie" name="tsr_cookie" class="form-control"
+                                value="{{ setting('tsr_cookie') }}">
                         </div>
                         <div class="mb-3">
                             <label for="tsr_username" class="form-label">Tài khoản</label>
-                            <input type="text" id="tsr_username" name="tsr_username" class="form-control" value="{{ setting('tsr_username') }}">
+                            <input type="text" id="tsr_username" name="tsr_username" class="form-control"
+                                value="{{ setting('tsr_username') }}">
                         </div>
                         <div class="mb-3">
                             <label for="tsr_deposit_description" class="form-label">Nội dung chuyển tiền</label>
-                            <input type="text" id="tsr_deposit_description" name="tsr_deposit_description" class="form-control" value="{{ setting('tsr_deposit_description') }}">
+                            <input type="text" id="tsr_deposit_description" name="tsr_deposit_description"
+                                class="form-control" value="{{ setting('tsr_deposit_description') }}">
                         </div>
                         <div class="mb-3">
                             <label for="tsr_deposit_limit" class="form-label">Số tiền nạp tối thiểu</label>
-                            <input type="number" id="tsr_deposit_limit" name="tsr_deposit_limit" class="form-control" value="{{ setting('tsr_deposit_limit') }}">
+                            <input type="number" id="tsr_deposit_limit" name="tsr_deposit_limit" class="form-control"
+                                value="{{ setting('tsr_deposit_limit') }}">
                         </div>
                         <div class="mb-3">
                             <div class="form-check form-switch mb-3">
-                                <input class="form-check-input" type="checkbox" role="switch" id="tsr_enabled" name="tsr_enabled" @checked(setting('tsr_enabled'))>
+                                <input class="form-check-input" type="checkbox" role="switch" id="tsr_enabled"
+                                    name="tsr_enabled" @checked(setting('tsr_enabled'))>
                                 <label class="form-check-label" for="tsr_enabled">Kích hoạt</label>
                             </div>
                         </div>
@@ -48,18 +55,21 @@
                         @csrf
                         <div class="mb-3">
                             <label for="charge_provider" class="form-label">Bên tích hợp</label>
-                            <select class="form-control" data-choices data-choices-search-false name="charge_provider" id="charge_provider">
+                            <select class="form-control" data-choices data-choices-search-false name="charge_provider"
+                                id="charge_provider">
                                 <option value="TSR">Thesieure.com</option>
                                 <option value="CARDVIP">Cardvip.vn</option>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label for="charge_api_id" class="form-label">API ID</label>
-                            <input type="text" id="charge_api_id" name="charge_api_id" class="form-control" value="{{ setting('charge_api_id') }}" placeholder="Nếu không có nhập đại cái gì cũng được">
+                            <input type="text" id="charge_api_id" name="charge_api_id" class="form-control"
+                                value="{{ setting('charge_api_id') }}" placeholder="Nếu không có nhập đại cái gì cũng được">
                         </div>
                         <div class="mb-3">
                             <label for="charge_api_key" class="form-label">API Key</label>
-                            <input type="text" id="charge_api_key" name="charge_api_key" class="form-control" value="{{ setting('charge_api_key') }}" placeholder="Mã API Key">
+                            <input type="text" id="charge_api_key" name="charge_api_key" class="form-control"
+                                value="{{ setting('charge_api_key') }}" placeholder="Mã API Key">
                         </div>
                         <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
                     </form>

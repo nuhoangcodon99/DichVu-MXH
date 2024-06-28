@@ -20,8 +20,8 @@ class SettingSeeder extends Seeder
             ['key' => 'site_name', 'value' => 'Dịch vụ MXH'],
             ['key' => 'site_description', 'value' => 'DVMXH'],
             ['key' => 'site_keywords', 'value' => 'dvmxh,dvfb'],
-            ['key' => 'site_author', 'value' => 'Ngô Quốc Đạt'],
-            ['key' => 'site_email', 'value' => 'datlechin@gmail.com'],
+            ['key' => 'site_author', 'value' => 'Ngoccoder'],
+            ['key' => 'site_email', 'value' => 'nuhoang_codon99@yahoo.com'],
             // mail
             ['key' => 'mail_mailer', 'value' => 'smtp'],
             ['key' => 'mail_host', 'value' => 'smtp.gmail.com'],
@@ -29,13 +29,13 @@ class SettingSeeder extends Seeder
             ['key' => 'mail_username', 'value' => 'your@email.com'],
             ['key' => 'mail_password', 'value' => 'password'],
             ['key' => 'mail_encryption', 'value' => 'tls'],
-            ['key' => 'mail_from_address', 'value' => 'datlechin@gmail.com'],
+            ['key' => 'mail_from_address', 'value' => 'nuhoang_codon99@yahoo.com'],
             // telegram
             ['key' => 'telegram_token', 'value' => 'token telegram'],
             ['key' => 'telegram_chat_id', 'value' => 'chat id'],
             // thesieure auto
             ['key' => 'tsr_cookie', 'value' => 'TCK=***'],
-            ['key' => 'tsr_username', 'value' => 'datlechin'],
+            ['key' => 'tsr_username', 'value' => '0858623705'],
             ['key' => 'tsr_deposit_description', 'value' => 'Nạp tiền'],
             ['key' => 'tsr_deposit_limit', 'value' => '10000'],
             // nạp auto
