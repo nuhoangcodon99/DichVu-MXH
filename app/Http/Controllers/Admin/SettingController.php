@@ -1,0 +1,46 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class SettingController extends Controller
+{
+    public function general()
+    {
+        return view('admin.settings.general');
+    }
+
+    public function updateGeneral(Request $request)
+    {
+        return to_route('admin.settings.general')->with('success', 'Cập nhật cấu hình chung thành công');
+    }
+
+    public function notifications()
+    {
+        return view('admin.settings.notifications');
+    }
+
+    public function deposit()
+    {
+        return view('admin.settings.deposit');
+    }
+
+    public function store(Request $request)
+    {
+        $request->merge(['tsr_enabled' => $request->has('tsr_enabled') ? 1 : 0]);
+
+        foreach ($request->file() as $key => $file) {
+            if ($file) {
+                $fileName = $key.'.'.$file->getClientOriginalExtension();
+                $file->storeAs('public/images', $fileName);
+                setting([$key => $fileName])->save();
+            }
+        }
+
+        setting($request->except('_token', 'site_logo', 'site_favicon'))->save();
+
+        return back()->with('success', 'Cập nhật cài đặt thành công');
+    }
+}
