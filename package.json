@@ -10,7 +10,7 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "axios": "^1.6.7",
+        "axios": "^1.7.4",
         "laravel-mix": "^6.0.49",
         "lodash": "^4.17.21",
         "postcss": "^8.4.35",
@@ -28,7 +28,7 @@
         "jquery": "^3.7.1",
         "node-waves": "^0.7.6",
         "simplebar": "^5.3.9",
-        "sweetalert2": "^11.6.13",
+        "sweetalert2": "^11.12.4",
         "toastify-js": "^1.12.0"
     }
 }
